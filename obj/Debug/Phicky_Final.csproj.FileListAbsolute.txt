@@ -1,0 +1,7 @@
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\bin\Phicky_Final.dll.config
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\bin\Phicky_Final.dll
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\bin\Phicky_Final.pdb
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\obj\Debug\Phicky_Final.csprojResolveAssemblyReference.cache
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\obj\Debug\Phicky_Final.csproj.CoreCompileInputs.cache
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\obj\Debug\Phicky_Final.dll
+C:\Users\Juand\OneDrive\Escritorio\Phicky_Final\Phicky_Final\obj\Debug\Phicky_Final.pdb

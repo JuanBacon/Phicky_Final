@@ -1,0 +1,38 @@
+﻿
+.Navegacion {
+    background-color: cornflowerblue;
+}
+
+.bg-oscuro {
+    background-color: rgba(75, 145, 215, 0.69);
+}
+
+.redondo {
+    border-radius: 100px 100px 100px 100px;
+    border: hidden;
+    font-size: small;
+    width: 75%;
+    height: 50%;
+    text-align: center;
+    position: absolute;
+    left: 12.5%;
+    top: 25%;
+}
+
+.centrado {
+    padding-left: 60%;
+    padding-top: 1%;
+}
+
+.nav-item {
+    margin: 1%;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+}

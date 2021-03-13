@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="MasterPage_Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/CascadaMaestra.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <!--Seccion Principal del Documento-->
+    <form id="form1" runat="server">
+
+        <!--Tabla que genera la estructura del proyecto-->
+        <table class="w-100 align-middle">
+
+            <!--Primera fila que representa a la cabecera del proyecto-->
+            <tr>
+
+                <!--Celda de la fila-->
+                <td>
+
+                    <!--Barra de navegación de las paginas-->
+                    <nav class="navbar fixed-top navbar-dark bg-oscuro">
+
+                            <!--Compartimiento de caracter fluido para distribucion del contenido-->
+                            <div class="container-fluid" id="navegacion">
+
+                                <!--Contenedor que distribuye la barra en una fila horizontal-->
+                                <div class="row">
+
+                                    <!--Contenedor que del logo de la marca-->
+                                    <div class="col">
+                                            <a class="navbar-brand izquierda"><img src="../Img/Picky%20logo.png" class="img-fluid" style=" max-width:45%;"/></a>
+                                    </div>
+                                    <!--Fin del contenedor que del logo de la marca-->
+
+                                    <!--Contenedor que de la barra de busqueda-->
+                                    <div class="col-5 " style="padding-left:12.5%;";>
+                                        <asp:TextBox ID="txt_Search" runat="server" class=" mr-sm-2 align-middle redondo" placeholder="¿Qué estás buscando?"></asp:TextBox>
+                                        
+                                        <asp:ImageButton ID="imgb_buscar" src="../Img/busqueda.png" style="height:50%; position:absolute; left:82.75%; top:25%" runat="server" OnClick="imgb_buscar_Click"/>
+                                    </div>
+                                    <!--Fin del contenedor que de la barra de busqueda-->
+
+                                    <!--Contenedor de los links a otras secciones de la pagina-->
+                                    <div class="col">
+                                            <ul class="navbar-nav" style="flex-direction:row;font-size:small">
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="Home.aspx"> Home |</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="Filtrado.aspx">Comprar Partes |</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="Armar.aspx">Armar tu PC |</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                
+                                                  <asp:HyperLink ID="ln_Perfil" runat="server" NavigateUrl="~/MasterPage/Usuario.aspx" CssClass="nav-link ">Perfil</asp:HyperLink>
+                                                  <asp:HyperLink ID="ln_sesion" runat="server" NavigateUrl="~/MasterPage/Sesion.aspx" CssClass="nav-link ">Inicio sesión</asp:HyperLink>
+                                                  <asp:Label ID="validarusuario" runat="server" Text="invitado" Font-Size="0px"></asp:Label>
+                                              </li>
+                                            </ul>
+                                    </div>
+                                    <!--Fin del contenedor de los links a otras secciones de la pagina-->
+
+                              </div>
+                              <!--Fin del contenedor que distribuye la barra en una fila horizontal-->
+
+                            </div>
+                            <!--Fin del compartimiento de caracter fluido para distribucion del contenido-->
+
+                     </nav>
+                    <!--Fin de la barra de navegacion-->
+
+                </td>
+                <!--Fin de la celda de la fila-->
+
+            </tr>
+            <!--Fin de la primera fila que representa a la cabecera del proyecto-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+            <!--Segunda fila que representa el espacio para las paginas de contenido anidadas a la paginas maestra-->
+            <tr>
+
+                <!--Celda de la fila-->
+                <td>
+
+                    <!--Contenedor del contenido-->
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!--Fin del contenedor del contenido-->
+
+                </td>
+                <!--Final d la celda de la fila-->
+
+            </tr>
+            <!--Final de la Segunda fila que representa el espacio para las paginas de contenido anidadas a la paginas maestra-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+            <!--Tercera fila que representa el espacio para el pie de las paginas del proyecto-->
+            <tr>
+
+                <!--Celda de la fila-->
+                <td>
+
+                    <!-- Footer del proyecto -->
+                        <footer class="page-footer font-small pt-4 bg-dark" style="color:aliceblue; position:relative; bottom:0;">
+
+                          <!-- Contenedor de los elementos del footer -->
+                              <div class="container-fluid text-center text-md-left">
+
+                                <!--Contenedor que distribuye la barra en una fila horizontal-->
+                                <div class="row">
+
+                                  <!--Contenedor que distribuye elementos en una columna-->
+                                  <div class="col-md-6 mt-md-0 mt-3">
+                                    <h5 class="text-uppercase">Phicky Group © </h5>
+                                    <p>Compra, vende y haz que si es tu pc, sean tus reglas.</p>
+                                  </div>
+                                  <!--Final del contenedor que distribuye elementos en una columna-->
+
+                                  <!--Contenedor que distribuye elementos en una columna-->
+                                  <div class="col-md-3 mb-md-0 mb-3" >
+
+                                    <!-- Titulo del apartado de Acortadores -->
+                                    <h5 class="text-uppercase">Acortadores</h5>
+
+                                    <!--Acortadores en lista -->
+                                    <ul class="navbar-nav nav-link" style="flex-direction:row;" >
+                                      <li class="nav-item ">
+                                        <a href="Home.aspx">Home</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a href="#!">Acerca De</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a href="https://docs.google.com/document/d/1nbeirVV-IjL2OW7OpgTRVUPJzw88c3GRVc55jStcKwg/edit?usp=sharing">Contacto</a>
+                                      </li>
+                                    </ul>
+                                    <!--Fin de los acortadores -->
+                                    
+                                  </div>
+                                  <!--Fin del contenedor que distribuye elementos en una columna-->
+
+                                  <!--Contenedor que distribuye elementos en una columna-->
+                                  <div class="col-md-3 mb-md-0 mb-3" >
+                                        <img src="../Img/Picky%20logo.png" class="img-fluid" style=" max-width:70%;"/>
+                                  </div>
+                                  <!--Fin del contenedor que distribuye elementos en una columna-->
+
+                                </div>
+                                <!--Fin del contenedor que distribuye la barra en una fila horizontal-->
+
+                              </div>
+                              <!-- Final del contenedor de los elementos del footer -->
+                              
+                              <!-- Espaciado para los derechos de autor -->
+                              <div class="footer-copyright text-center py-3"> © 2019 Copyright:
+                                    <a> J. BUSTAMANTE - J.RENZA - S. GIRALDO </a>
+                              </div>
+
+                        </footer>
+                        <!-- Final del footer del proyecto -->
+
+
+                </td>
+                <!--Final d la celda de la fila-->
+            </tr>
+             <!--Final de la tercera fila que representa el espacio para el pie de las paginas del proyecto-->
+        </table>
+        <!--Final de la tabla que genera la estructura del proyecto-->
+
+    </form>
+
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--Final del cuerpo de la pagina maestra-->
+</body>
+</html>
